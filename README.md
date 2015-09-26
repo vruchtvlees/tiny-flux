@@ -105,7 +105,7 @@ var MyDispatcher = new Dispatcher();
 ```
 
 #### `MyDispatcher` will have the following methods:
-##### `register(store, callback)`
+##### Method: `register(store, callback)`
 This registers a new store to the dispatcher. The `store` argument can be anything, but a TinyFlux `Store` object is recommended. The `callback` will be the function that's called for handling an action.
 
 Example usage:
@@ -120,7 +120,7 @@ MyDispatcher.register(MyStore, function(action) {
 
 Note: If you use a custom object like in this example instead of a TinyFlux `Store`, your callback needs to return whether or not it emitted a change (boolean). If you use the TinyFlux `Store`, this will be handled automatically.
 
-##### `dispatch(action)`
+##### Method: `dispatch(action)`
 This dispatches the supplied object, `action`, handing it to all the registered stores.
 
 Example usage:
@@ -133,7 +133,7 @@ MyDispatcher.dispatch({
 
 ```
 
-##### `waitFor(store1, store2, ..., storeN)`
+##### Method: `waitFor(store1, store2, ..., storeN)`
 When called it makes sure that stores `1` through `N` have handled the current action before continuing in the current callback.
 
 Note: Must be called from within a store callback.
@@ -156,7 +156,7 @@ MyDispatcher.register(MyOtherStore, function(action) {
 });
 ```
 
-##### `didEmitChange(store1, store2, ..., storeN)`
+##### Method: `didEmitChange(store1, store2, ..., storeN)`
 Tells you whether any of the stores from `1` through `N` have emitted a change. If any have, it'll return `true`, otherwise `false`.
 
 Note: Must be called from within a store callback.
@@ -180,7 +180,7 @@ MyDispatcher.register(MyOtherStore, function(action) {
 });
 ```
 
-##### `addPostDispatchCallback(callback)` and `removePostDispatchCallback(callback)`
+##### Method: `addPostDispatchCallback(callback)` and `removePostDispatchCallback(callback)`
 Internal functions...
 
 ### The `Store`
@@ -227,7 +227,7 @@ var MyStore = new Store({
 ```
 
 #### `MyStore` will have the following methods:
-##### `getPrivateNumber()` and `getPrivateCalculation()`
+##### Method: `getPrivateNumber()` and `getPrivateCalculation()`
 The methods you define in the constructor object will be available.
 
 Example usage:
@@ -237,7 +237,7 @@ MyStore.getPrivateNumber();
 
 ```
 
-##### `addChangeListener(callback)`
+##### Method: `addChangeListener(callback)`
 This method allows you to listen for changes emitted by the `Store`.
 
 Example usage:
@@ -249,7 +249,7 @@ MyStore.addChangeListener(function() {
 
 ```
 
-##### `removeChangeListener(callback)`
+##### Method: `removeChangeListener(callback)`
 This method allows you to remove callbacks from the `Store`.
 
 Example usage in a React component:
