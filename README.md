@@ -15,8 +15,12 @@ If you're not using npm you can simply download the source here: [tiny-flux.js](
 var Dispatcher = require('tiny-flux').Dispatcher,
 	Store = require('tiny-flux').Store;
 
+// Alternative without require:
+
+var Dispatcher = TinyFlux.Dispatcher,
+	Store = TinyFlux.Store;
+
 ```
-If you don't use `require()` you'll find `Dispatcher` and `Store` in the global scope.
 
 ## Example
 ```javascript
