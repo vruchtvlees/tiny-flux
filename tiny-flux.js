@@ -179,7 +179,7 @@ var Store = function Store(options) {
     return this;
 }
 
-module.exports = {
+module && (module.exports = {
     Dispatcher: Dispatcher,
     Store: Store
-};
+});
