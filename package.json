@@ -1,6 +1,6 @@
 {
   "name": "tiny-flux",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A very small, fast implementation of the Flux design pattern",
   "main": "tiny-flux.js",
   "bin": {

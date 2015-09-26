@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish', './' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ './' ]
+5 verbose cache add [ './', null ]
+6 verbose cache add name=undefined spec="./" args=["./",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: './',
+7 verbose parsed url   path: './',
+7 verbose parsed url   href: './' }
+8 silly lockFile 0ee6c175- ./
+9 verbose lock ./ /Users/paulwest/.npm/0ee6c175-.lock
+10 verbose tar pack [ '/var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz',
+10 verbose tar pack   './' ]
+11 verbose tarball /var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+12 verbose folder ./
+13 info prepublish tiny-flux@0.0.0
+14 silly lockFile 04cb2bca-tar tar://./
+15 verbose lock tar://./ /Users/paulwest/.npm/04cb2bca-tar.lock
+16 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+17 verbose lock tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz /Users/paulwest/.npm/fca50ae7-90443-0-7934136809781194-tmp-tgz.lock
+18 silly lockFile 04cb2bca-tar tar://./
+19 silly lockFile 04cb2bca-tar tar://./
+20 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+21 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+22 verbose tar unpack /var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+23 silly lockFile c9178c70-west-npm-tiny-flux-0-0-0-package tar:///Users/paulwest/.npm/tiny-flux/0.0.0/package
+24 verbose lock tar:///Users/paulwest/.npm/tiny-flux/0.0.0/package /Users/paulwest/.npm/c9178c70-west-npm-tiny-flux-0-0-0-package.lock
+25 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+26 verbose lock tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz /Users/paulwest/.npm/fca50ae7-90443-0-7934136809781194-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry tiny-flux.js
+32 silly gunzTarPerm extractEntry bin/tiny-flux.min.js
+33 silly lockFile c9178c70-west-npm-tiny-flux-0-0-0-package tar:///Users/paulwest/.npm/tiny-flux/0.0.0/package
+34 silly lockFile c9178c70-west-npm-tiny-flux-0-0-0-package tar:///Users/paulwest/.npm/tiny-flux/0.0.0/package
+35 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+36 silly lockFile fca50ae7-90443-0-7934136809781194-tmp-tgz tar:///var/folders/h1/nkfz66js64q__d1qvkfdlnjr0000gn/T/npm-15025-FAo2sO-6/1443281590443-0.7934136809781194/tmp.tgz
+37 silly lockFile 0ee6c175- ./
+38 silly lockFile 0ee6c175- ./
+39 silly publish { name: 'tiny-flux',
+39 silly publish   version: '0.0.0',
+39 silly publish   description: 'A very small, fast implementation of the Flux design pattern',
+39 silly publish   main: 'tiny-flux.js',
+39 silly publish   bin: { 'tiny-flux': './bin/tiny-flux.min.js' },
+39 silly publish   repository:
+39 silly publish    { type: 'git',
+39 silly publish      url: 'https://github.com/bartjoyce/tiny-flux.git' },
+39 silly publish   author: { name: 'Bartholomew Joyce' },
+39 silly publish   bugs: { url: 'https://github.com/bartjoyce/tiny-flux/issues' },
+39 silly publish   homepage: 'https://github.com/bartjoyce/tiny-flux',
+39 silly publish   readme: '# tiny-flux\nA very small, fast implementation of the Flux design pattern\n',
+39 silly publish   readmeFilename: 'README.md',
+39 silly publish   _id: 'tiny-flux@0.0.0',
+39 silly publish   _shasum: 'f8c236f2fd1724d5e73da707b4988120cf152067',
+39 silly publish   _from: './' }
+40 verbose url raw tiny-flux
+41 verbose url resolving [ 'https://registry.npmjs.org/', './tiny-flux' ]
+42 verbose url resolved https://registry.npmjs.org/tiny-flux
+43 info trying registry request attempt 1 at 16:33:10
+44 http PUT https://registry.npmjs.org/tiny-flux
+45 http 403 https://registry.npmjs.org/tiny-flux
+46 verbose headers { 'content-type': 'application/json',
+46 verbose headers   'cache-control': 'max-age=60',
+46 verbose headers   'content-length': '95',
+46 verbose headers   'accept-ranges': 'bytes',
+46 verbose headers   date: 'Sat, 26 Sep 2015 15:33:12 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-lcy1128-LCY',
+46 verbose headers   'x-cache': 'MISS',
+46 verbose headers   'x-cache-hits': '0',
+46 verbose headers   'x-timer': 'S1443281590.868286,VS0,VE1463' }
+47 error publish Failed PUT 403
+48 error Error: "You cannot publish over the previously published version 0.0.0." : tiny-flux
+48 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+48 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+48 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+48 error     at Request.EventEmitter.emit (events.js:98:17)
+48 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+48 error     at Request.EventEmitter.emit (events.js:117:20)
+48 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+48 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+48 error     at _stream_readable.js:919:16
+48 error     at process._tickCallback (node.js:419:13)
+49 error If you need help, you may report this *entire* log,
+49 error including the npm and node versions, at:
+49 error     <http://github.com/npm/npm/issues>
+50 error System Darwin 14.0.0
+51 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "./"
+52 error cwd /Users/paulwest/Scripts/JavaScript/TinyFlux
+53 error node -v v0.10.28
+54 error npm -v 1.4.9
+55 verbose exit [ 1, true ]
