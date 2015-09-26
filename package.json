@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "A very small, fast implementation of the Flux design pattern",
   "main": "tiny-flux.js",
+  "bin": {
+    "tiny-flux": "./bin/tiny-flux.min.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bartjoyce/tiny-flux.git"
