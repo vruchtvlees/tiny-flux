@@ -1,5 +1,5 @@
 # tiny-flux
-A very small, fast implementation of the Flux design pattern
+A very small, fast implementation of the Flux design pattern. It does exactly what you need, and nothing more. Less than 200 lines uncompressed, **800** bytes when minified and gzipped.
 
 ## Installation
 ```
@@ -17,6 +17,81 @@ var Dispatcher = require('tiny-flux').Dispatcher,
 
 ```
 If you don't use `require()` you'll find `Dispatcher` and `Store` in the global scope.
+
+## Example
+```javascript
+
+/* Constructing a Dispatcher */
+var MyDispatcher = new Dispatcher();
+
+/* Constructing a Store */
+var MyStore = new Store({
+	dispatcher: MyDispatcher,
+	initialize: function() {
+
+		this.number = 0; // only accessible from inside the Store methods
+
+		this.func = function() {
+			// autobinding 'this'
+			return this.number * 2;
+		};
+
+	},
+	callback: function(action) {
+
+		switch (action.type) {
+			case INCREMENT_NUMBER:
+				this.myPrivateNumber++;
+				this.emitChange();
+				break;
+		}
+
+	},
+	getNumber: function() {
+		return this.number;
+	},
+	getCalculation: function() {
+		return this.func();
+	}
+});
+
+/* Constructing another Store */
+var MyOtherStore = new Store({
+	dispatcher: MyDispatcher,
+	initialize: function() {
+		this.otherNumber = MyStore.getNumber() * 10;
+	},
+	callback: function(action) {
+
+		MyDispatcher.waitFor(MyStore);
+		if (MyDispatcher.didEmitChange(MyStore)) {
+			this.otherNumber = MyStore.getNumber() * 10;
+			this.emitChange();
+		}
+
+	},
+	getOtherNumber: function() {
+		return this.otherNumber;
+	}
+});
+
+/* Dispatching an action */
+MyDispatcher.dispatch({
+	type: INCREMENT_NUMBER
+});
+
+/* Listening to changes */
+function updateView() {
+	var otherNumber = MyOtherStore.getOtherNumber();
+
+	// ...
+};
+MyOtherStore.addChangeListener(updateView);
+
+/* Removing change listeners */
+MyOtherStore.removeChangeListener(updateView);
+
+```
 
 ## Documentation
 ### The `Dispatcher`
