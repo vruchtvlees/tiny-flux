@@ -41,7 +41,7 @@ var MyStore = new Store({
 
 		switch (action.type) {
 			case INCREMENT_NUMBER:
-				this.myPrivateNumber++;
+				this.number++;
 				this.emitChange();
 				break;
 		}
