@@ -34,7 +34,7 @@ var Dispatcher = function Dispatcher() {
             dispatchActionToStore(action, self.stores[i]);
 
         for (var i = postDispatchCallbacks.length - 1; i >= 0; i--)
-            postDispatchCallbacks[i]();
+            postDispatchCallbacks[i](action);
 
         self.phase = IDLE;
     };
